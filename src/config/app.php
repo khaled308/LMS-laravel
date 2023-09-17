@@ -160,6 +160,10 @@ return [
          * Package Service Providers...
          */
 
+        App\Modules\User\Providers\UserServiceProvider::class,
+        App\Modules\Dashboard\Providers\DashboardServiceProvider::class,
+        App\Modules\Auth\Providers\AuthServiceProvider::class,
+
         /*
          * Application Service Providers...
          */

@@ -40,6 +40,42 @@
               </p>
             </a>
           </li>
+          {{-- users dropdown (admins, teachers, parents) --}}
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Users
+                <i class="fas fa-angle-left right"></i>
+                {{-- <span class="badge badge-info right">6</span> --}}
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('admins.index')}}" class="nav-link">
+                  <i class="fas fa-user-shield nav-icon"></i>
+                  <p>Admins</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                  <p>Teachers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-user-friends nav-icon"></i>
+                  <p>Parents</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-user-graduate nav-icon"></i>
+                  <p>Students</p>
+                </a>
+              </li>
+            </ul>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

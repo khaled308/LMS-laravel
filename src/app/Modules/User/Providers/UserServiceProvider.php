@@ -17,6 +17,7 @@ class UserServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         Route::middleware('web')
                 ->group(__DIR__ . '/../routes/web.php');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'user');
     }
 
 }

@@ -40,7 +40,6 @@
               </p>
             </a>
           </li>
-          {{-- users dropdown (admins, teachers, parents) --}}
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
@@ -76,6 +75,44 @@
                 </a>
               </li>
             </ul>
+          </li>
+          {{-- class --}}
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-school"></i>
+              <p>
+                Classes
+                <i class="fas fa-angle-left right"></i>
+                {{-- <span class="badge badge-info right">6</span> --}}
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('classes.index')}}" class="nav-link">
+                  <i class="fas fa-chalkboard nav-icon"></i>
+                  <p>Classes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                  <p>Sections</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Subjects</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-door-open nav-icon"></i>
+                  <p>Classrooms</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

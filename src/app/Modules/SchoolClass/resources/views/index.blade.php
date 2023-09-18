@@ -14,10 +14,6 @@
                     <div class="card-body">
                         <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
                             <div class="row">
-                                <div class="col-sm-12 col-md-6"></div>
-                                <div class="col-sm-12 col-md-6"></div>
-                            </div>
-                            <div class="row">
                                 <div class="col-sm-12">
                                     <table id="example2" class="table table-bordered table-hover dataTable dtr-inline"
                                         aria-describedby="example2_info">
@@ -39,10 +35,12 @@
                                                         class="btn btn-primary btn-sm">Edit</a>
                                                     <a href="#"
                                                         class="btn btn-danger btn-sm class-delete">Delete</a>
-                                                         <form action="{{route('classes.destroy', $class->id) }}" method="post">
+                                                         <form action="{{route('classes.destroy', $class->id) }}" method="post" class="d-none">
                                                             @method('delete')
                                                             @csrf
                                                          </form>
+                                                         <a href="{{ route('classes.show', $class->id) }}"
+                                                            class="btn btn-primary btn-sm">Show</a>
                                                 </td>
                                             </tr>
                                             @empty

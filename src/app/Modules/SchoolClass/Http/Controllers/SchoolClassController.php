@@ -4,6 +4,7 @@ namespace App\Modules\SchoolClass\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Modules\SchoolClass\Models\SchoolClass;
+use App\Modules\Subject\Models\Subject;
 use Illuminate\Http\Request;
 
 class SchoolClassController extends Controller
@@ -46,9 +47,11 @@ class SchoolClassController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SchoolClass $schoolClass)
+    public function show(SchoolClass $class)
     {
-        //
+        $classSubjects = $class->subjects()->get();
+        $subjects = Subject::all();
+        return view('class::show', compact('class', 'classSubjects', 'subjects'));
     }
 
     /**

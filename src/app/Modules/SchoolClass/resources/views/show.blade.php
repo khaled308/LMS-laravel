@@ -16,13 +16,18 @@
                                     <form action="{{ route('classes.attach.subjects', $class->id) }}" method="post">
                                         @csrf
                                         <div class="checkbox-group">
-                                            @foreach ($subjects as $subject)
-                                                <div class="form-check mb-3">
-                                                    <input type="checkbox" class="form-check-input" {{$classSubjects->contains($subject) ? 'checked' : ''}} name="subjects[]" id="subject-{{ $subject->id }}" value="{{$subject->id}}">
-                                                    <label class="form-check-label" for="subject-{{ $subject->id }}">{{ $subject->name }}</label>
-                                                </div>
-                                            @endforeach
+                                            <div class="row">
+                                                @foreach ($subjects as $subject)
+                                                    <div class="col-md-3"> <!-- Adjust the column size as needed -->
+                                                        <div class="form-check mb-3">
+                                                            <input type="checkbox" class="form-check-input" {{$classSubjects->contains($subject) ? 'checked' : ''}} name="subjects[]" id="subject-{{ $subject->id }}" value="{{$subject->id}}">
+                                                            <label class="form-check-label" for="subject-{{ $subject->id }}">{{ $subject->name }}</label>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
                                         </div>
+                                        
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>                                    
                                 </div>

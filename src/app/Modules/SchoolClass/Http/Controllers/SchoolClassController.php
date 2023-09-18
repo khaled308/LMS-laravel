@@ -37,8 +37,6 @@ class SchoolClassController extends Controller
 
         SchoolClass::create([
             'name' => $request->name,
-            'created_by' => auth()->user()->id,
-            'updated_by' => auth()->user()->id,
             'description' => $request->description ?? ''
         ]);
 
@@ -72,7 +70,6 @@ class SchoolClassController extends Controller
 
         $class->update([
             'name' => $request->name,
-            'updated_by' => auth()->user()->id,
             'description' => $request->description ?? ''
         ]);
 

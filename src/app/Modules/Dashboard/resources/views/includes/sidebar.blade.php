@@ -100,7 +100,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('subjects.index')}}" class="nav-link">
                   <i class="fas fa-book nav-icon"></i>
                   <p>Subjects</p>
                 </a>

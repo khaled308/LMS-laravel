@@ -16,7 +16,6 @@ return new class () extends Migration {
             $table->string('last_name');
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('class_id')->nullable()->constrained('school_classes')->nullOnDelete();
-            $table->foreignId('parent_id')->nullable()->constrained('parents')->nullOnDelete();
             $table->enum('gender', ['male', 'female']);
             $table->date('date_of_birth');
             $table->string('place_of_birth');
@@ -26,7 +25,6 @@ return new class () extends Migration {
             $table->string('phone_number')->nullable();
             $table->string('photo')->nullable();
             $table->string('blood_group')->nullable();
-            $table->date('admission_date');
             $table->decimal('height', 5, 2)->nullable();
             $table->decimal('weight', 5, 2)->nullable();
             $table->timestamps();
